@@ -52,14 +52,11 @@ li {
   padding: 4px;
 }
 
-i {
-  margin-left: 50px;
-}
-
 .fas.fa-trash {
   color: rgba(192, 192, 192, 0.212);
   transition: font-size .8s ease-in-out, color .4s ease-in;
   font-size: 12px;
+  margin-left: 50px;
 }
 
 .fas.fa-trash:hover {
@@ -68,11 +65,10 @@ i {
 }
 
 .sb_container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 
@@ -85,7 +81,7 @@ input {
   font-size: 30px;
   padding: 0;
   transition: width 1s ease;
- color: #fff;
+  color: #fff;
 }
 
 input.active {
@@ -99,6 +95,7 @@ i:hover {
 
 ::placeholder {
   color: rgb(207, 207, 207);
+  font-size: 20px;
 }
 
 .fas.fa-search {
@@ -106,7 +103,7 @@ i:hover {
   font-size: 30px;
   border-radius: 50%;
   color: white;
-  transition: font-size .8s ease;
+  transition: font-size .8s ease-in-out;
   
 }
 
@@ -120,9 +117,8 @@ i:hover {
 
 
 .fas.fa-times {
-  padding: 10px 15px;
+  padding: 15px 18px;
   font-size: 30px;
-  /* background: green; */
   border-radius: 50%;
   transform: scale(0);
   color: #fff;
@@ -131,7 +127,6 @@ i:hover {
 
 .fas.fa-times:hover {
   font-size: 50px;
-  /* padding: 20px 30px; */
 }
 .fas.fa-times.active {
   transform: scale(1);
