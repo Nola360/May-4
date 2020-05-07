@@ -229,3 +229,27 @@ header {
   height: 100vh;
   z-index: 1;
 }
+
+label {
+  position: absolute;
+  background: rgb(233, 233, 233);
+  border-radius: 2px;
+  padding: 3px 8px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  bottom: 120px;
+  right: 50px;
+  display: none;
+}
+
+label.active {
+  display: block;
+}
+
+.title {
+  position: relative;
+  left: 35%;
+  justify-self: center;
+  font-size: 13px;
+}
