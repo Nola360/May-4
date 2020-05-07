@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Montserrat';
+  user-select: none;
 }
 
 body {
@@ -16,7 +17,11 @@ body {
 
 .container {
   height: 100vh;
+  display: flex;
+  flex-direction: column; 
 }
+
+
 
 .item_container {
   position: absolute;
@@ -43,6 +48,7 @@ h3 {
   border-bottom: 1px solid silver;
   font-size: 12px;
   margin-bottom: 5px;
+  text-transform: capitalize;
 }
 
 li {
@@ -50,9 +56,10 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 4px;
+  
 }
 
-.fas.fa-trash {
+li .fas.fa-trash {
   color: rgba(192, 192, 192, 0.212);
   transition: font-size .8s ease-in-out, color .4s ease-in;
   font-size: 12px;
@@ -82,6 +89,7 @@ input {
   padding: 0;
   transition: width 1s ease;
   color: #fff;
+  
 }
 
 input.active {
@@ -104,7 +112,6 @@ i:hover {
   border-radius: 50%;
   color: white;
   transition: font-size .8s ease-in-out;
-  
 }
 
 .fas.fa-search:hover {
@@ -114,7 +121,6 @@ i:hover {
 .fas.fa-search.active {
   display: none;
 }
-
 
 .fas.fa-times {
   padding: 15px 18px;
@@ -130,4 +136,96 @@ i:hover {
 }
 .fas.fa-times.active {
   transform: scale(1);
+}
+
+.trash_bin_folder {
+  font-size: 12px;
+  /* color: #000;
+  background: green; */
+}
+
+.trash_bin {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.trash_bin .trash {
+  font-size: 70px;
+  color: #fff;
+  transition: font-size .2s ease-in-out;
+}
+
+.trash_bin .trash:hover {
+  font-size: 75px;
+  cursor: pointer;
+}
+
+.folder_container {
+  position: absolute; 
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: 400px;
+  background: #fff;
+  border-radius: 6px;
+  display: none;
+  transition: width .8s ease-in-out, height .8s ease-in-out;
+}
+
+header {
+  display: flex;
+  background: rgb(226, 226, 226);
+  border-radius: 6px 6px 0 0;
+  padding: 4px 0 4px 0;
+}
+
+.button {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  margin-left: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(180, 180, 180);
+  padding: 6px;
+}
+
+.close_button {
+  background: rgb(253, 76, 76);
+  color: #000;
+}
+
+.minimize_button {
+  background: rgb(255, 208, 0);
+}
+
+.expand_button {
+  background: rgb(14, 211, 14);
+}
+
+.button i {
+  font-size: 8px;
+  padding: 9px;
+}
+
+.folder_container.active {
+  display: block;
+}
+
+.folder_container.minimize {
+  width: 10%;
+  height: 10%;
+  overflow: auto;
+}
+.folder_container.expand {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
 }
