@@ -69,7 +69,6 @@ const trash_bin_folder = document.querySelector('.folder_container');
 
 trash_bin_icon.addEventListener('dblclick', () => {
   trash_bin_folder.classList.toggle('active');
-
 })
 
 // Trash Bin Buttons
@@ -98,6 +97,22 @@ function_buttons.forEach(button => {
         break;
     }
   })
+})
+
+
+// Trash Bin Label Hover
+const trash = document.querySelector('.trash');
+const label = document.querySelector('label');
+
+trash.addEventListener('mouseover', () => {
+  if ('mouseover') {
+    label.classList.toggle('active');
+  } else if ('mouseleave') {
+    label.classList.toggle('active');
+  }
+
+
+
 })
 
 
